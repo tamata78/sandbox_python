@@ -11,7 +11,7 @@ class ForSand():
         print(i)
 
     enumList = ['taro', 'hana']
-    for i, name in enumerate(enumList, 1):
+    for i, name in enumerate(enumList, 1):  # start from index 1
         print(i, name)
 
     iteList1 = [1, 2, 3]
