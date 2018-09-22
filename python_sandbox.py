@@ -1,6 +1,17 @@
 # -*- coding: utf-8 -*-
 import sys
 import itertools
+from operator import itemgetter, attrgetter
+
+
+class ListSand():
+    # sort dic in list
+    listBeforeSort = [{"name": "taro", "age": 10}, {"name": "hanako", "age": 7}]
+    sortedList = sorted(listBeforeSort, key=itemgetter("dic_key_name"))
+
+    # sort obj in list
+    listBeforeSort = [("taro", "A", 10), ("hanako", "B", 7), ("jiro", "C", 3)]
+    sortedList = sorted(listBeforeSort, key=attrgetter("obj_item_name"))
 
 
 class ForSand():
