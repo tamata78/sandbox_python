@@ -21,15 +21,18 @@ class ForSand():
     for i in range(3, 5):  # 3 4
         print(i)
 
+    # get index and value
     enumList = ['taro', 'hana']
-    for i, name in enumerate(enumList, 1):  # start from index 1
-        print(i, name)
+    for index, name in enumerate(enumList, 1):  # start from index 1
+        print(index, name)
 
+    # get two array value
     iteList1 = [1, 2, 3]
     iteList2 = [10, 20, 30]
     for i, j in itertools.product(iteList1, iteList2):
         print(i, j)
 
+    # get map key and value
     info = {"a": "answer", "b": "block"}
     for key in info:
         print(key)  # a b
@@ -40,8 +43,8 @@ class ForSand():
     for key, val in info.items:
         print(key, val)  # a answer  b block
 
+    # create value list
     values = [val for val in info.values()]
-
 
 class ExceptionSand():
 
