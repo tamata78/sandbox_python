@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
 import itertools
+import os
 from operator import itemgetter, attrgetter
 
 
@@ -66,3 +67,14 @@ class ExceptionSand():
         hoge()
     except ZeroDivisionError as e:
         print("except args:", e.args)
+
+class SettingSand():
+    # 環境変数取得
+    print(os.environ.get('LANG')) # ja_JP.UTF-8
+    print(os.environ.get('NEW_KEY')) # None
+    print(os.environ.get('NEW_KEY', 'default')) # default
+
+    # 設定(プログラム内で有効。実際のシステム環境変数は書き換わらない)
+    os.environ['NEW_KEY'] = 'test'
+    print(os.environ['NEW_KEY'])
+    # test
